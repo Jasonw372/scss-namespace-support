@@ -20,13 +20,6 @@ export function activate(context: vscode.ExtensionContext) {
 	// This line of code will only be executed once when your extension is activated
 	console.log('SCSS Namespace Support is now active');
 
-	// 注册 Hello World 命令
-	const disposable = vscode.commands.registerCommand('extensionproject.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from SCSS Namespace Support!');
-	});
-
 	// 注册自动补全提供器
 	const provider = new ScssNamespaceCompletionProvider();
 	const selector = { language: 'scss', scheme: 'file' };
