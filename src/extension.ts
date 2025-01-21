@@ -20,6 +20,7 @@ export function activate(context: vscode.ExtensionContext) {
 	// This line of code will only be executed once when your extension is activated
 	console.log('SCSS Namespace Support is now active');
 
+
 	// 注册自动补全提供器
 	const provider = new ScssNamespaceCompletionProvider();
 	const selector = { language: 'scss', scheme: 'file' };
@@ -33,8 +34,6 @@ export function activate(context: vscode.ExtensionContext) {
 			'@'   // 在输入@符号后触发
 		)
 	);
-
-	context.subscriptions.push(disposable);
 }
 
 // This method is called when your extension is deactivated
