@@ -2,7 +2,7 @@
   "name": "scss-namespace-support",
   "displayName": "SCSS Namespace Support",
   "description": "Provides autocompletion for SCSS namespaces from @use statements",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "publisher": "huanyushi",
   "license": "MIT",
   "repository": {
