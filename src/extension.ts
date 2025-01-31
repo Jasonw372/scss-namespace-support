@@ -30,8 +30,7 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.languages.registerCompletionItemProvider(
 			selector,
 			provider,
-			'.',  // 在输入点号后触发
-			'@'   // 在输入@符号后触发
+			'@', '.'  // 添加触发字符
 		)
 	);
 }
@@ -167,11 +166,7 @@ class ScssNamespaceCompletionProvider implements vscode.CompletionItemProvider {
 					.appendText(ns.alias ? `\nAliased as: ${ns.alias}` : '');
 			}
 			
-			item.command = {
-				command: 'editor.action.triggerSuggest',
-				title: 'Trigger suggestions'
-			};
-			
+			// 移除触发建议的命令
 			return item;
 		});
 	}
